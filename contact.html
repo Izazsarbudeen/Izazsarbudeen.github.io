@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Electrical Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact Me</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to collaborate? Feel free to reach out!</p>
+            
+            <!-- Contact Form -->
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage" style="color: green; display: none;">Thank you! Your message has been sent.</p>
+            
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <h3>Follow Me</h3>
+                <ul>
+                    <!-- LinkedIn -->
+                    <li>
+                        <a href="https://www.linkedin.com/in/izazsarbudeen" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <!-- GitHub -->
+                    <li>
+                        <a href="https://github.com/izazsarbudeen" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <!-- Twitter -->
+                    <li>
+                        <a href="https://twitter.com/izazsarbudeen" target="_blank">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </li>
+                    <!-- Instagram -->
+                    <li>
+                        <a href="https://www.instagram.com/izazkhan_786_" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <!-- Email -->
+                    <li>
+                        <a href="mailto:izazkhan8293@outlook.com" target="_blank">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; © Built with GitHub | Site design / logo © 2025 Credits to Izazsarbudeen; user contributions licensed under CC BY-SA . rev 2025.1.7.20880</p>
+    </footer>
+</body>
+</html>
