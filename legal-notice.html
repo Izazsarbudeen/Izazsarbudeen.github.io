@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Notice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Legal Notice</h1>
+    <p><strong>Copyright &copy; <span id="year"></span> Mr.Izazsarbudeen. All Rights Reserved.</strong></p>
+    <p>This website and its contents are protected under applicable copyright laws. Unauthorized use, reproduction, or distribution of any material on this website without prior written permission is strictly prohibited.</p>
+    <p>All trademarks, logos, and brand names used on this website belong to their respective owners. This website does not claim ownership of third-party trademarks.</p>
+    <p>For any inquiries regarding copyright or legal concerns, please contact: <a href="mailto:izazkhan8293@outlook.com">your.email@example.com</a></p>
+    
+    <footer>
+        &copy; <span id="footer-year"></span>  Mr.Izazsarbudeen. All Rights Reserved.
+    </footer>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("footer-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+  </html>
