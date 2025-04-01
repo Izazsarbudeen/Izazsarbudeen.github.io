@@ -40,6 +40,7 @@ darkModeToggle.addEventListener('click', () => {
         darkModeToggle.innerText = 'Dark Mode';
     }
 });
+
 const sidebar = document.getElementById("draggableSidebar");
 const toggleBtn = document.getElementById("toggleBtn");
 
@@ -50,10 +51,10 @@ let offsetX, offsetY;
 toggleBtn.addEventListener("click", () => {
     if (sidebar.style.left === "0px") {
         sidebar.style.left = "-250px";  // Hide the sidebar
-        toggleBtn.textContent = "☰ Open Sidebar";
+        toggleBtn.textContent = "☰";
     } else {
         sidebar.style.left = "0px";  // Show the sidebar
-        toggleBtn.textContent = "✖ Close Sidebar";
+        toggleBtn.textContent = "✖";
     }
 });
 
