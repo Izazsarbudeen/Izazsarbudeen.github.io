@@ -172,17 +172,16 @@ header nav a:hover {
     color: #FF5F6D;
     text-decoration: underline;
     }
-@media (max-width: 768px) {
-    .container {
+@media (max-width: 768px) 
+{
+.container {
         flex-direction: column;
-    }
-
-    .content {
+}
+.content {
         width: 100%;
         margin-bottom: 20px;
     }
-
-    .sidebar {
+ .sidebar {
         width: 100%;
         margin-top: 20px;
     }
