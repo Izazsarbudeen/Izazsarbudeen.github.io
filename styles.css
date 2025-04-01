@@ -185,18 +185,18 @@ footer {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
-    width: 60px;
+    width: 250px;
     height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
     position: absolute;
-    right: 0;
     top: 0;
-    background: white;
-    transition: width 0.3s ease-in-out;
-    overflow: hidden;
-    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: grab;
 }
 
 .sidebar:hover {
