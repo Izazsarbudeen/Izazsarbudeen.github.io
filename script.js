@@ -44,7 +44,7 @@ darkModeToggle.addEventListener('click', () => {
 const sidebar = document.getElementById("draggableSidebar");
 const toggleBtn = document.getElementById("toggleBtn");
 
-let isDragging = false;
+let isDragging = true;
 let offsetX, offsetY;
 
 // Toggle Sidebar Visibility
