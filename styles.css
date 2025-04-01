@@ -190,10 +190,10 @@ footer {
 .sidebar {
     width: 60px;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
-    background: #1f1f1f;
+    background: white;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
     box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
