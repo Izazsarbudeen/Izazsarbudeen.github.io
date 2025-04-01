@@ -40,7 +40,42 @@ darkModeToggle.addEventListener('click', () => {
         darkModeToggle.innerText = 'Dark Mode';
     }
 });
+const sidebar = document.getElementById("draggableSidebar");
+const toggleBtn = document.getElementById("toggleBtn");
 
+let isDragging = false;
+let offsetX, offsetY;
+
+// Toggle Sidebar Visibility
+toggleBtn.addEventListener("click", () => {
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";  // Hide the sidebar
+        toggleBtn.textContent = "☰ Open Sidebar";
+    } else {
+        sidebar.style.left = "0px";  // Show the sidebar
+        toggleBtn.textContent = "✖ Close Sidebar";
+    }
+});
+
+// Dragging functionality
+sidebar.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - sidebar.offsetLeft;
+    offsetY = e.clientY - sidebar.offsetTop;
+    sidebar.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        sidebar.style.left = `${e.clientX - offsetX}px`;
+        sidebar.style.top = `${e.clientY - offsetY}px`;
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    sidebar.style.cursor = "grab";
+});
 // Contact Form Validation
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -76,28 +111,4 @@ scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-<script>
-        const sidebar = document.getElementById("draggableSidebar");
 
-        let isDragging = false;
-        let offsetX, offsetY;
-
-        sidebar.addEventListener("mousedown", (e) => {
-            isDragging = true;
-            offsetX = e.clientX - sidebar.offsetLeft;
-            offsetY = e.clientY - sidebar.offsetTop;
-            sidebar.style.cursor = "grabbing";
-        });
-
-        document.addEventListener("mousemove", (e) => {
-            if (isDragging) {
-                sidebar.style.left = `${e.clientX - offsetX}px`;
-                sidebar.style.top = `${e.clientY - offsetY}px`;
-            }
-        });
-
-        document.addEventListener("mouseup", () => {
-            isDragging = false;
-            sidebar.style.cursor = "grab";
-        });
-    </script>
