@@ -75,11 +75,29 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("sidebar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML("beforeend", data);
-        })
-        .catch(error => console.error("Error loading sidebar:", error));
-});
+
+<script>
+        const sidebar = document.getElementById("draggableSidebar");
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        sidebar.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            offsetX = e.clientX - sidebar.offsetLeft;
+            offsetY = e.clientY - sidebar.offsetTop;
+            sidebar.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (isDragging) {
+                sidebar.style.left = `${e.clientX - offsetX}px`;
+                sidebar.style.top = `${e.clientY - offsetY}px`;
+            }
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+            sidebar.style.cursor = "grab";
+        });
+    </script>
