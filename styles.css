@@ -133,7 +133,45 @@ header nav a:hover {
     font-size: 1rem;
     color: #555;
 }
+sidebar {
+    width: 25%;
+    position: sticky;
+    top: 20px;
+    padding: 20px;
+}
 
+.sidebar-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF5F6D;
+}
+
+.sidebar ul {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #FF5F6D;
+    text-decoration: underline;
+    }
 /* Footer */
 footer {
     text-align: center;
