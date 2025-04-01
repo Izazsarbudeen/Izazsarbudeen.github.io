@@ -185,59 +185,49 @@ footer {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* Sidebar Styling */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    cursor: grab;
-}
 
-.sidebar:hover {
-    width: 220px;
-}
 
-.sidebar-content {
-    padding: 20px;
-}
+const sidebar = document.getElementById("draggableSidebar");
+const toggleBtn = document.getElementById("toggleBtn");
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+let isDragging = false;
+let offsetX, offsetY;
 
-.sidebar ul li {
-    padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+// Toggle Sidebar Visibility
+toggleBtn.addEventListener("click", () => {
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";  // Hide the sidebar
+        toggleBtn.textContent = "☰ Open Sidebar";
+    } else {
+        sidebar.style.left = "0px";  // Show the sidebar
+        toggleBtn.textContent = "✖ Close Sidebar";
+    }
+});
 
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
-}
+// Dragging functionality
+sidebar.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - sidebar.offsetLeft;
+    offsetY = e.clientY - sidebar.offsetTop;
+    sidebar.style.cursor = "grabbing";
+});
 
-.sidebar ul li a:hover {
-    color: #ffd700;
-}
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        sidebar.style.left = `${e.clientX - offsetX}px`;
+        sidebar.style.top = `${e.clientY - offsetY}px`;
+    }
+});
 
-.sidebar ul li a::before {
-    content: "→";
-    margin-right: 10px;
-    opacity: 0;
-    transition: 0.3s;
-}
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    sidebar.style.cursor = "grab";
+});
 
-.sidebar ul li a:hover::before {
-    opacity: 1;
-}
+
+
+
+
+
+
+
