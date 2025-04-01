@@ -75,3 +75,11 @@ window.addEventListener('scroll', () => {
 scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading sidebar:", error));
+});
