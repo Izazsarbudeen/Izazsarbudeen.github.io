@@ -184,6 +184,56 @@ footer {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+ 
 }
+
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: -250px;  /* Initially hidden off-screen */
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+    transition: left 0.3s ease;
+}
+
+.sidebar h2 {
+    margin: 0;
+    text-align: center;
+}
+
+/* Toggle Button Styling */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    background-color: #1e3c72;
+}
+
+/* Content Styling */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+
+
+
 
 
