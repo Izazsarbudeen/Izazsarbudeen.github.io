@@ -96,7 +96,7 @@
 </script>
  <script>
 async function getLiveVisitors() {
-    const response = await fetch(`https://www.googleapis.com/analytics/v3/data/realtime?ids=ga:622998807044&metrics=rt:activeUsers&key=AIzaSyA_RAkzT2xtUozUGv9aZQVCo93XNesHMr0`);
+    const response = await fetch(`https://www.googleapis.com/analytics/v3/data/realtime?ids=ga:G-FY9G1CT9SP&metrics=rt:activeUsers&key=AIzaSyA_RAkzT2xtUozUGv9aZQVCo93XNesHMr0`);
     const data = await response.json();
     document.getElementById("liveVisitors").innerText = data.totalsForAllResults["rt:activeUsers"];
 }
