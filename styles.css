@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -216,7 +217,7 @@ body.light-mode {
 }
 
 /* Container Styling */
-.container {
+.container-fluid {
     max-width: 600px;
     margin: auto;
     background: rgba(255, 255, 255, 0.1);
