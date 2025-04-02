@@ -11,6 +11,15 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FY9G1CT9SP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FY9G1CT9SP');
+</script>
 <body>
     <!-- Header -->
     <header>
@@ -94,17 +103,6 @@
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
- <script>
-async function getLiveVisitors() {
-    const response = await fetch(`https://www.googleapis.com/analytics/v3/data/realtime?ids=ga:G-FY9G1CT9SP&metrics=rt:activeUsers&key=AIzaSyA_RAkzT2xtUozUGv9aZQVCo93XNesHMr0`);
-    const data = await response.json();
-    document.getElementById("liveVisitors").innerText = data.totalsForAllResults["rt:activeUsers"];
-}
-
-setInterval(getLiveVisitors, 5000); // Refresh every 5 seconds
-</script>
-
-<h2>Live Visitors: <span id="liveVisitors">Loading...</span></h2>
-
+ 
 </body>
 </html>
