@@ -112,4 +112,28 @@ scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+    <!-- JavaScript for Sidebar, Dropdown & Dark Mode -->
+    
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("main-content").classList.toggle("active");
+        }
 
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            const arrow = document.querySelector(".dropdown .arrow");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            arrow.classList.toggle("active");
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+           
