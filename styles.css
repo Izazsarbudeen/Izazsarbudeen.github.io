@@ -188,50 +188,13 @@ footer {
  
 }
 
-/* Light Mode Styles */
-body.light-mode {
-    background: linear-gradient(to right, #ffffff, #e6e6e6);
-    color: black;
-}
 
-/* Theme Toggle Button */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-#themeButton {
-    background: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.light-mode #themeButton {
-    background: black;
-    color: white;
-}
-
-/* Container Styling */
-.container-fluid {
-    max-width: 600px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-}
 
 /* Chart Styling */
 .chart-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 200px;
     margin-top: 20px;
 }
 
