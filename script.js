@@ -137,26 +137,3 @@ scrollToTopButton.addEventListener('click', () => {
             }
         }
            
-<script>
-// Replace with your Google Analytics 4 Measurement ID
-const measurementId = 'YOUR_GOOGLE';
-
-// Example function to fetch data from Google Analytics (replace with your actual implementation)
-function fetchAnalyticsData() {
-    // This is a placeholder. In a real scenario, you'd use a server-side language
-    // to fetch data from the Google Analytics API and then send it to the client.
-
-    // Simulate fetching data (replace with your server-side data retrieval)
-    setTimeout(() => {
-        document.getElementById('users').textContent = '2,345';
-        document.getElementById('pageviews').textContent = '10,234';
-        document.getElementById('bounceRate').textContent = '35%';
-        document.getElementById('country').textContent = 'United States';
-        document.getElementById('avgSession').textContent = '2m 15s';
-        document.getElementById('device').textContent = 'Mobile';
-    }, 1500); // Simulate a 1.5-second delay
-}
-
-fetchAnalyticsData(); // Call the function to load the data
-
-</script>
