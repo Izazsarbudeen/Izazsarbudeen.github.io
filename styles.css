@@ -136,13 +136,14 @@ header nav a:hover {
 }
 
 /* Footer */
+
 footer {
     text-align: center;
-    background: #333;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    padding: 2rem 0;
+}
+    
 }
 /* Social Media Links Styling */
 .social-links {
