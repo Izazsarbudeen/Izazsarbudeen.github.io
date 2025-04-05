@@ -8,8 +8,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="fade-in">
 
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li class="dropdown" onclick="toggleDropdown()">
+                📂 Menu <span class="arrow">▶</span>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="about.html">🔹 About</a>
+                    <a href="projects.html">🔹 Projects</a>
+                    <a href="documents.html">🔹 Documents</a>
+                    <a href="resume.html">🔹 Curriculum vitae</a>
+                    <a href="stats.html">🔹 Website Analytics</a>
+                    <a href="terms-of-use.html">🔹 Terms and conditions</a>
+                </div>
+            </li>
+            <li><a href="index.html">🔧 Services</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙 </button>
+
+    
 
 
 
@@ -20,6 +47,7 @@
             
         </div>
 </header>
+    
 <div class="container">
     <h2>Introduction</h2>
     <p>Welcome to Mr.Izazsarbudeen Website! This privacy policy explains how we collect, use, and protect your personal information when you visit and use our website. By using our website, you agree to the collection and use of information in accordance with this policy.</p>
@@ -100,7 +128,14 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
  
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/simple-icons@11.12.0/index.min.js "></script>
+        <script src="style.css"></script>
+        <script src="script.js"></script>
 
 </body>
 </html>
