@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Electrical Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact Me</h1>
+            
+        </div>
+    </header>
+</head>
+<body class="fade-in">
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li class="dropdown" onclick="toggleDropdown()">
+                📂 Menu <span class="arrow">▶</span>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="about.html">🔹 About</a>
+                    <a href="projects.html">🔹 Projects</a>
+                    <a href="documents.html">🔹 Documents</a>
+                    <a href="resume.html">🔹 Curriculum vitae</a>
+                    <a href="stats.html">🔹 Website Analytics</a>
+                    <a href="terms-of-use.html">🔹 Terms and conditions</a>
+                </div>
+            </li>
+            <li><a href="index.html">🔧 Services</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">🌙 </button>
+
+    
+        
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to collaborate? Feel free to reach out!</p>
+            
+            <!-- Contact Form -->
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage" style="color: green; display: none;">Thank you! Your message has been sent.</p>
+            
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <h3>Follow Me</h3>
+                <ul>
+                    <!-- LinkedIn -->
+                    <li>
+                        <a href="https://www.linkedin.com/in/izazsarbudeen" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <!-- GitHub -->
+                    <li>
+                        <a href="https://github.com/izazsarbudeen" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </li>
+                    <!-- Twitter -->
+                    <li>
+                        <a href="https://twitter.com/izazsarbudeen" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+
+                         
+                        </a>
+                    </li>
+                    <!-- Instagram -->
+                    <li>
+                        <a href="https://www.instagram.com/izazkhan_786_" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <!-- Email -->
+                    <li>
+                        <a href="mailto:izazkhan8293@outlook.com" target="_blank">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer  
+     style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center; padding: 20px; font-size: 14px; font-family: Arial, sans-serif;">
+    <p style="margin: 0;">© 2025 Copyright infringement to Mr.Izazsarbudeen. All Rights Reserved.</p>
+    <p style="margin: 5px 0;">
+        
+        <a href="privacy-policy.html" style="color: #f8d210; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+        <a href="terms-of-use.html" style="color: #f8d210; text-decoration: none; margin: 0 10px;">Terms of Use</a> |
+        <a href="legal notice.html" style="color: #f8d210; text-decoration: none; margin: 0 10px;">Legal Notice</a>
+    </p>
+        <p style="margin: 5px 0;">
+        
+        <a href="index.html" style="color: #f8d210; text-decoration: none; margin: 0 10px;">Home</a> 
+        
+    </p>
+    <div style="margin: 10px 0;">
+        <a href="https://facebook.com/izazsarbudeen" style="margin: 0 10px;" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/izazsarbudeen" style="margin: 0 10px;" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com/izazkhan786" style="margin: 0 10px;" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com/in/izazsarbudeen" style="margin: 0 10px;" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/24/145/145807.png" alt="LinkedIn">
+        </a>
+    </div>
+    <p style="margin-top: 10px; font-size: 12px; opacity: 0.8;">Designed with ❤️ by Izazsarbudeen</p>
+</footer>
+  
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/simple-icons@11.12.0/index.min.js "></script>
+        
+</body>
+</html>
