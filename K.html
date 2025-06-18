@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aramco Standards Portal - Login Required</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #004b87;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #004b87;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003660;
+        }
+
+        .disclaimer {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aramco Standards Access</h1>
+</header>
+
+<main>
+    <div id="loginForm">
+        <h2>Login</h2>
+        <p>Authorized users only. Please enter your credentials.</p>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" />
+
+        <button onclick="login()">Login</button>
+        <div class="error" id="errorMsg"></div>
+    </div>
+
+    <div id="protectedContent" class="hidden">
+        <h2>Compliance with Aramco Engineering Standards</h2>
+        <p>
+            Our engineering and technical services are designed to meet or exceed the requirements defined in
+            <strong>Saudi Aramco Engineering Standards (SAES)</strong>. This includes:
+        </p>
+        <ul>
+            <li>SAES-A-112: Design Criteria</li>
+            <li>SAES-B-064: Welding Requirements</li>
+            <li>SAES-K-005: Instrument Installation</li>
+            <li>SAES-J-902: Telecommunications Requirements</li>
+        </ul>
+
+        <p>
+            Official standards access: 
+            <a href="https://vendor.aramco.com/" target="_blank">Saudi Aramco Vendor Portal</a>.
+        </p>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> All referenced documents and trademarks are property of Saudi Aramco.
+            This page is informational and does not host official Aramco documents.
+        </div>
+    </div>
+</main>
+
+<script>
+    function login() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value;
+
+        // Dummy credentials - replace with secure server-side logic in production
+        const validUsername = "admin";
+        const validPassword = "aramco123";
+
+        const errorMsg = document.getElementById("errorMsg");
+
+        if (username === validUsername && password === validPassword) {
+            document.getElementById("loginForm").classList.add("hidden");
+            document.getElementById("protectedContent").classList.remove("hidden");
+        } else {
+            errorMsg.textContent = "Invalid username or password.";
+        }
+    }
+</script>
+
+</body>
+</html>
