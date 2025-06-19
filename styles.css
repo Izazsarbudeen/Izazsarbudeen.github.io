@@ -173,6 +173,14 @@ footer {
     transition: color 0.3s ease;
 }
 
+.tech-stack span {
+      display: inline-block;
+      background: #e0e0e0;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 0.2rem;
+      font-size: 0.9rem;
+}
 .social-links ul li a i {
     margin-right: 8px;
     font-size: 1.5rem;
