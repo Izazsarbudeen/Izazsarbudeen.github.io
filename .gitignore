@@ -1,0 +1,40 @@
+# Node / build system
+node_modules/
+package.json
+package-lock.json
+vite.config.js
+webpack.config.js
+next.config.js
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Source folders
+src/
+components/
+config/
+server/
+backend/
+
+# Python
+__pycache__/
+*.pyc
+requirements.txt
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Large raw files (optional if you want to block these)
+*.psd
+*.fig
+*.ai
